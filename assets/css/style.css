@@ -1,0 +1,115 @@
+#cover_section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#cover_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: center;
+  z-index: -1;
+  border-radius: 0 !important;
+}
+
+#cover_text {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#subtitle_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#subtitle_top #subtitle_icon {
+  margin-bottom: 10px;
+}
+
+#maintitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitle_bottom {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0 82px; */
+  margin: 0 5%;
+}
+
+.link_text {
+  all: unset;
+  cursor: pointer;
+}
+
+#firefly_sit {
+  /* height: 500px; */
+  height: 65%;
+  position: absolute;
+  z-index: 5;
+  top: 30%;
+  /* right: 8%; */
+  right: 5%;
+  transition: transform 0.5 ease;
+}
+
+#nino_main {
+  /* height: 1000px; */
+  height: 130%;
+  position: absolute;
+  z-index: 4;
+  top: 7%;
+  left: 25%;
+  transition: transform 0.5 ease;
+}
+
+#firefly_stand {
+  /* height: 500px; */
+  height: 65%;
+  position: absolute;
+  z-index: 5;
+  top: 30%;
+  left: 5%;
+  transition: transform 0.5 ease;
+}
+
+#firefly_sit:hover,
+#firefly_stand:hover {
+  top: 25%;
+  transform: scale(1.1);
+}
+
+#nino_main:hover {
+  top: 5%;
+  transform: scale(1.02);
+}
+
+#cover_button {
+  position: absolute;
+  z-index: 5;
+  right: -14%;
+  bottom: -27%;
+  transform: scale(0.12);
+  cursor: pointer;
+}
+
+#cover_button:active {
+  opacity: 0.8;
+}
+
+.app_header {
+  height: 100px;
+  background-color: black;
+}
