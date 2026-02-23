@@ -704,6 +704,18 @@ const fallingImages = [
   "assets/img/falling/misa_7.png",
 ];
 
+const coverImages = [
+  "assets/img/cover/gift_voucher.png",
+  "assets/img/cover/sparkxie_bg.png",
+  "assets/img/cover/wishes_bg_final.png",
+  "assets/img/cover/Nhling_avatar.png",
+  "assets/img/cover/Minh_avatar.png",
+  "assets/img/cover/cover_firefly_stand.png",
+  "assets/img/cover/cover_firefly_sit.png",
+  "assets/img/cover/cover_nino.png",
+  "assets/img/cover/cover_background.png",
+];
+
 const songList = [
   {
     name: "Gotoubun No Kimochi",
@@ -958,6 +970,11 @@ function preloadImages() {
     const img = new Image();
     img.src = element.image;
   });
+
+  coverImages.forEach(element => {
+    const img = new Image();
+    img.src = element;
+  })
 }
 
 function createFallingItems() {
