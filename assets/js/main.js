@@ -971,10 +971,24 @@ function preloadImages() {
     img.src = element.image;
   });
 
-  coverImages.forEach(element => {
+  coverImages.forEach((element) => {
     const img = new Image();
     img.src = element;
-  })
+  });
+
+  listPages.forEach((element) => {
+    const img1 = new Image();
+    const img2 = new Image();
+    const img3 = new Image();
+    const img4 = new Image();
+    const img5 = new Image();
+
+    img1.src = element.small1;
+    img2.src = element.small2;
+    img3.src = element.square;
+    img4.src = element.tall;
+    img5.src = element.wide;
+  });
 }
 
 function createFallingItems() {
