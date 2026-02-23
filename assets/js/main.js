@@ -916,6 +916,7 @@ const keyList = [
 
 let currentIndex = 0;
 let currentSong = 0;
+let currentFallingIndex = 0;
 let isFalled = false;
 let isPlaying = false;
 let isOpened = false;
@@ -961,10 +962,7 @@ function loadPage(index) {
 }
 
 function preloadImages() {
-  fallingImages.forEach((element) => {
-    const img = new Image();
-    img.src = element;
-  });
+  preloadSliders(currentIndex);
 
   songList.forEach((element) => {
     const img = new Image();
@@ -975,20 +973,38 @@ function preloadImages() {
     const img = new Image();
     img.src = element;
   });
+}
 
-  listPages.forEach((element) => {
-    const img1 = new Image();
-    const img2 = new Image();
-    const img3 = new Image();
-    const img4 = new Image();
-    const img5 = new Image();
+function preloadSliders(index) {
+  for (let i = 1; i < 3; i++) {
+    let newIndex = index + i;
 
-    img1.src = element.small1;
-    img2.src = element.small2;
-    img3.src = element.square;
-    img4.src = element.tall;
-    img5.src = element.wide;
-  });
+    if (newIndex < listLength) {
+      const img1 = new Image();
+      const img2 = new Image();
+      const img3 = new Image();
+      const img4 = new Image();
+      const img5 = new Image();
+
+      img1.src = listPages[newIndex].small1;
+      img2.src = listPages[newIndex].small2;
+      img3.src = listPages[newIndex].square;
+      img4.src = listPages[newIndex].tall;
+      img5.src = listPages[newIndex].wide;
+    }
+  }
+}
+
+function preloadFalling() {
+  for (let i = 0; i < 5; i++) {
+    if (currentFallingIndex < fallingLength) {
+      const img = new Image();
+      img.src = fallingImages[currentFallingIndex];
+      currentFallingIndex++;
+    } else {
+      break;
+    }
+  }
 }
 
 function createFallingItems() {
@@ -1148,6 +1164,8 @@ document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight") {
         currentIndex = currentIndex === listLength - 1 ? 0 : currentIndex + 1;
         loadPage(currentIndex);
+        preloadSliders(currentIndex);
+        preloadFalling();
       } else if (event.key === "ArrowLeft") {
         currentIndex = currentIndex === 0 ? listLength - 1 : currentIndex - 1;
         loadPage(currentIndex);
