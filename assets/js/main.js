@@ -948,6 +948,18 @@ function loadPage(index) {
   }, 400);
 }
 
+function preloadImages() {
+  fallingImages.forEach((element) => {
+    const img = new Image();
+    img.src = element;
+  });
+
+  songList.forEach((element) => {
+    const img = new Image();
+    img.src = element.image;
+  });
+}
+
 function createFallingItems() {
   const body = document.body;
   const item = document.createElement("img");
@@ -1195,6 +1207,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     showPrize();
   }
 });
+
+window.addEventListener("DOMContentLoaded", preloadImages);
 
 renderSongList();
 renderKeysList();
