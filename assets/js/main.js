@@ -708,8 +708,6 @@ const coverImages = [
   "assets/img/cover/gift_voucher.png",
   "assets/img/cover/sparkxie_bg.png",
   "assets/img/cover/wishes_bg_final.png",
-  "assets/img/cover/Nhling_avatar.png",
-  "assets/img/cover/Minh_avatar.png",
   "assets/img/cover/cover_firefly_stand.png",
   "assets/img/cover/cover_firefly_sit.png",
   "assets/img/cover/cover_nino.png",
@@ -1232,7 +1230,7 @@ document.addEventListener("dblclick", (event) => {
   ) {
     gachaItem.classList.add("startShake");
     setTimeout(() => {
-      videoEffect.src = "../assets/video/explode_effect.mp4";
+      videoEffect.src = "assets/video/explode_effect.mp4";
       videoEffect.classList.add("ExplodeOn");
       videoEffect.load();
       videoEffect.play();
