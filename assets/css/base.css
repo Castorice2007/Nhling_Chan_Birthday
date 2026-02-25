@@ -503,7 +503,7 @@ img {
 }
 
 #gacha_modal_gift.changeBg {
-  background-image: url("../img/cover/gift_voucher.png");
+  background-image: url("../img/cover/gift_voucher.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
