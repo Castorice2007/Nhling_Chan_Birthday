@@ -33,6 +33,17 @@ const listPages = [
     border_color: "rgb(255, 0, 0)",
   },
   {
+    title: "Genshin Impact - Columbina",
+    tall: "assets/img/gallery/Columbina/colum2.webp",
+    square: "assets/img/gallery/Columbina/colum3.webp",
+    small1: "assets/img/gallery/Columbina/colum7.webp",
+    small2: "assets/img/gallery/Columbina/colum1.webp",
+    wide: "assets/img/gallery/Columbina/colum4.webp",
+    note: "Queen: Nhling Chan <br /> Character: Nholumbina <br />Feedback: Chưa kịp nhận mèo Nholombina nữa là Live sập rồi hic hic",
+    text_color: "rgb(185, 214, 232)",
+    border_color: "rgb(232, 139, 170)",
+  },
+  {
     title: "My dress-up Darling - Marin Kitagawa",
     tall: "assets/img/gallery/Marin/marin1.webp",
     square: "assets/img/gallery/Marin/marin5.webp",
@@ -702,6 +713,12 @@ const fallingImages = [
   "assets/img/falling/misa_5.webp",
   "assets/img/falling/misa_6.webp",
   "assets/img/falling/misa_7.webp",
+  "assets/img/falling/colum_1.webp",
+  "assets/img/falling/colum_2.webp",
+  "assets/img/falling/colum_3.webp",
+  "assets/img/falling/colum_4.webp",
+  "assets/img/falling/colum_5.webp",
+  "assets/img/falling/colum_6.webp",
 ];
 
 const coverImages = [
